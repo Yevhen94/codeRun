@@ -1,0 +1,37 @@
+@import "../../styles/mixins.scss";
+@import "../../styles//varibles.scss";
+
+.pagination {
+  &__list {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  &__item {
+    border: 1px solid $c-black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 10px;
+    @include size(30);
+    cursor: pointer;
+    display: flex;
+
+    &--arrow {
+      background-color: $c-grey;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+.active {
+  background-color: $c-blue;
+}
+
+.disabled-arrow {
+  background-color: $c-white;
+  border: 1px solid $c-grey;
+  color: $c-grey;
+}

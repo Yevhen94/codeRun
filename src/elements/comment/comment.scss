@@ -1,0 +1,75 @@
+@import "../../styles/varibles.scss";
+@import "../../styles/mixins.scss";
+
+.comment-item {
+  border-bottom: 1px solid $c-lightBorder;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  display: flex;
+
+  &__photo {
+    @include size(40);
+  }
+
+  &__content {
+    padding-left: 10px;
+    width: 85%;
+
+    &__wrapper {
+      justify-content: space-between;
+      display: flex;
+    }
+  }
+
+  &__username,
+  &__text {
+    word-wrap: break-word;
+  }
+
+  &__text {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  &__username {
+    max-width: 70%;
+  }
+
+  &__date {
+    font-size: em(12);
+  }
+}
+
+.icon {
+  @include size(10);
+}
+
+.image {
+  border-radius: 50%;
+
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .comment-item {
+    &__photo {
+      @include size(25);
+    }
+    &__content {
+      width: 75%;
+      &__wrapper {
+        display: block;
+      }
+    }
+
+    &__username {
+      max-width: 100%;
+    }
+
+    &__date {
+      margin: 10px 0;
+    }
+  }
+}

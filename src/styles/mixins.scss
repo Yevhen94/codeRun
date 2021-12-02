@@ -1,0 +1,28 @@
+@function em($px) {
+  @return $px / $fs-base + em;
+}
+
+@mixin size($px) {
+  width: $px + px;
+  height: $px + px;
+}
+
+@mixin maxCentered($widthPx) {
+  max-width: $widthPx + px;
+  margin: 0 auto;
+}
+
+// FONTS
+@mixin font-face(
+  $fontname,
+  $fontfile,
+  $fontweight: normal,
+  $fontstyle: normal
+) {
+  @font-face {
+    font-family: $fontname;
+    src: url("../assets/fonts/" + $fontfile + ".ttf") format("truetype");
+    font-weight: $fontweight;
+    font-style: $fontstyle;
+  }
+}

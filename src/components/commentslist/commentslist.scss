@@ -1,0 +1,57 @@
+@import "../../styles/varibles.scss";
+@import "../../styles/mixins.scss";
+
+.comments {
+  @include maxCentered(600);
+  &__button {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__data {
+    border-bottom: 2px solid $c-grey;
+    justify-content: space-between;
+    font-family: $f-lobster;
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+
+    &__sort {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
+
+    & .data-text {
+      margin-right: 10px;
+      cursor: pointer;
+      display: block;
+
+      &:hover {
+        color: $c-blue;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .comments {
+    &__data {
+      text-align: center;
+      font-size: em(12);
+
+      &__sort {
+        display: block;
+
+        & .data-text {
+          margin-right: 0;
+          text-align: end;
+        }
+      }
+    }
+  }
+}

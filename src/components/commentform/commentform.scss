@@ -1,0 +1,62 @@
+@import "../../styles/varibles.scss";
+@import "../../styles/mixins.scss";
+
+.form {
+  flex-direction: column;
+  font-family: $f-roboto;
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  & label {
+    width: 100%;
+  }
+
+  &__fieldname {
+    margin-bottom: 5px;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: em(18);
+    display: block;
+  }
+
+  &__input-name,
+  &__input-text {
+    border: 1px solid $c-lightBorder;
+    background-color: $c-darkBg;
+    font-family: inherit;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+  }
+
+  &__input-text {
+    height: 150px;
+    resize: none;
+  }
+
+  &__button {
+    margin-top: 5px;
+    align-self: flex-end;
+  }
+
+  &__error,
+  &__success {
+    margin-top: 5px;
+    height: 20px;
+  }
+
+  &__error {
+    font-size: em(12);
+    color: $c-red;
+  }
+
+  &__success {
+    font-size: em(18);
+    font-weight: bold;
+    color: $c-green;
+  }
+}
+
+

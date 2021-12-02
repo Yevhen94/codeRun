@@ -1,0 +1,12 @@
+@import "../../styles/varibles.scss";
+@import "../../styles/mixins.scss";
+
+.main {
+  &__wrapper {
+    padding: 30px 20px;
+  }
+
+  &__form {
+    @include maxCentered(600);
+  }
+}
